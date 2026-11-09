@@ -1,0 +1,123 @@
+.animated-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 36px;
+  border: 4px solid transparent;
+  font-size: 16px;
+  background-color: transparent;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #22d3ee;
+  box-shadow: 0 0 0 2px #22d3ee;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 24px;
+  fill: #22d3ee;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 16px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #22d3ee; /* cyan-400 */
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color: #0f0f19; /* Тёмный цвет текста при наведении (как ваш фон навбара) */
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #0f0f19;
+}
+
+.animated-button:active {
+  scale: 0.95;
+  box-shadow: 0 0 0 4px #22d3ee;
+}
+
+.animated-button:hover .circle {
+  width: 220px;
+  height: 220px;
+  opacity: 1;
+}
+
+
+#contactme {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+#contactme:hover {
+  letter-spacing: 3px;
+  background-color: #06b6d4;
+  color: #ffffff;
+  box-shadow: #06b6d4 0px 7px 29px 0px;
+}
+
+#contactme:active {
+  letter-spacing: 3px;
+  background-color: #06b6d4;
+  color: #ffffff;
+  box-shadow: #06b6d4 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+html.dark #contactme {
+  background-color: #1f2937;
+  color: #ffffff;
+}
